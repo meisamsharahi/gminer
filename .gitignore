@@ -1,0 +1,16 @@
+.env
+.env.*
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pdf
+.DS_Store
+downloads/
+data/
+.pytest_cache/
+downloader/
+PROJECT_NOTES.md
+input/
+output/
+*.log

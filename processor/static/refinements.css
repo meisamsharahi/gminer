@@ -1,0 +1,65 @@
+/* Purple palette, readable text, and responsive form refinements. */
+:root{--muted:#62586f}
+.help,.stat-foot,.side-note,.setup>p,.setup-step p,.note-card p,.config-item small,.field .help,.table-foot,.file-name small,.bottom-note,.login-note{color:#62586f!important}
+.eyebrow,.nav-label,.stat-label,th,.login-story-foot{color:#62586f}
+.badge svg{width:11px;height:11px}
+.nav a{white-space:nowrap}
+.profile-card-top>div:nth-child(2){min-width:0}
+.profile-card h2,.profile-card .model{overflow-wrap:anywhere}
+.stat-value{overflow-wrap:anywhere}
+.check-row{display:grid;grid-template-columns:16px minmax(0,1fr) auto;gap:10px;min-height:44px;line-height:1.5;cursor:pointer;transition:background .15s,border-color .15s}
+.check-row input[type=checkbox]{width:16px;height:16px;min-height:16px;margin:0;padding:0;accent-color:var(--accent);cursor:pointer}
+.check-row small{margin-left:0;white-space:nowrap;color:var(--muted)}
+.check-row:hover{background:#f7f2fc;border-color:#bca3d4}
+.check-row:has(input:checked){background:var(--accent-soft);border-color:#9c79bd}
+.check-row:focus-within{outline:2px solid var(--accent);outline-offset:2px}
+.report-dialog .dialog-head h2{overflow-wrap:anywhere}
+@media(min-width:721px) and (max-width:1100px){.sidebar{width:210px}.main{margin-left:210px;width:calc(100% - 210px)}.nav a{padding-left:11px;padding-right:11px;gap:9px}}
+.folder-input-row{display:flex;gap:7px;align-items:center}
+.folder-input-row input{min-width:0;flex:1}
+.folder-input-row .btn{flex-shrink:0;padding:9px 10px;font-size:11px}
+.folder-picker{width:min(670px,calc(100vw - 32px))}
+.folder-shortcuts{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:17px}
+.folder-shortcuts .btn{font-size:10px;padding:7px 10px;min-height:30px}
+.folder-location{display:flex;gap:8px;align-items:end;margin-bottom:13px}
+.folder-location .field{flex:1;min-width:0;margin:0}
+.folder-location .btn{margin-bottom:0}
+.folder-breadcrumbs{display:flex;gap:5px;align-items:center;overflow:auto;white-space:nowrap;padding:2px 0 13px}
+.folder-breadcrumbs .text-button{font-size:11px}
+.folder-breadcrumbs svg{width:12px;height:12px;color:var(--muted)}
+.folder-list{min-height:170px;max-height:260px;overflow:auto;border:1px solid var(--line);border-radius:9px}
+.folder-list-item{width:100%;display:flex;gap:10px;align-items:center;text-align:left;border:0;border-bottom:1px solid var(--line);background:white;padding:12px 14px;color:#372840;font-size:12px}
+.folder-list-item:last-child{border-bottom:0}
+.folder-list-item:hover,.folder-list-item:focus-visible{background:var(--accent-soft)}
+.folder-list-item span{flex:1;overflow-wrap:anywhere;min-width:0}
+.folder-list-item svg{width:16px;height:16px;color:#744b96}
+.folder-empty{text-align:center;padding:43px 20px;color:var(--muted);font-size:12px;line-height:1.7}
+.folder-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:17px 0 12px}
+.folder-selection{font-size:11px;color:var(--muted);margin-top:14px;line-height:1.7;overflow-wrap:anywhere}
+.folder-selection strong{color:var(--accent);font-weight:500}
+.new-folder-form{margin:0 0 15px;padding:14px;background:var(--bg);border:1px solid var(--line);border-radius:8px}
+.new-folder-form[hidden]{display:none}
+.new-folder-row{display:flex;gap:8px;align-items:end}
+.new-folder-row .field{flex:1;margin:0;min-width:0}
+@media(max-width:720px){.folder-input-row .btn{font-size:11px}.folder-picker .dialog-footer{flex-wrap:wrap}.folder-shortcuts{gap:5px}.folder-list{max-height:220px}.folder-breadcrumbs{padding-bottom:10px}}
+
+/* Keep controls, placeholders, and keyboard focus legible on light surfaces. */
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+input::placeholder,textarea::placeholder{color:#74677e;opacity:1}
+.search input{color:var(--ink)}
+.btn:disabled,.btn:disabled:hover{opacity:1;background:#eeebf2;border-color:#c6bbd2;color:#6a5d79;box-shadow:none}
+.btn.ghost:disabled{background:transparent;border-color:transparent}
+.icon-button:disabled{opacity:1;color:#766584}
+.nav a.active:hover{background:var(--accent-soft)}
+.stat-foot,.field .help,.file-name small,.table-foot,.side-note{font-size:11px}
+th{font-size:10px}
+.badge{font-size:11px}
+.btn.danger{color:#963928;border-color:#b77c70}
+.btn.danger:hover{background:#fff0ec}
+.btn.primary.danger{background:#963928;border-color:#963928;color:#fff}
+.btn.primary.danger:hover{background:#7b2b20;border-color:#7b2b20}
+.btn.danger-ghost{background:transparent;border-color:transparent;color:#963928}
+.btn.danger-ghost:hover{background:#fff0ec;border-color:#edc7bd}
+.btn.danger:disabled,.btn.danger-ghost:disabled{background:#eeebf2;border-color:#c6bbd2;color:#6a5d79}
+.btn.danger-ghost:disabled{background:transparent;border-color:transparent}
+.delete-warning{font-size:12px;font-weight:550;color:#963928;margin-top:15px}
